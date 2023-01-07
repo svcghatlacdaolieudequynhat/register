@@ -48,11 +48,13 @@
         });
       },
       handlePhone(event) {
-        console.log(event.target.value)
         var that = this;
         fetch('./assets/js/data.json').then((response) => response.json()).then((json) => 
           json.forEach(function(data){
-            if (String(event.target.value) === String(data.phone)) {
+            const arrBirds = [String(data.phone)];
+            let regex = new RegExp(String(event.target.value), 'i'); 	// Create a regex object (a constructor).
+            let filtered = arrBirds.filter(item => regex.test(item));	// Tests for a match.
+            if (filtered.length >= 1) {
               const { elements } = document.querySelector('form');
               for (const [ key, value ] of Object.entries(data) ) {
                 const field = elements.namedItem(key)
@@ -62,7 +64,7 @@
                 } else if(key === 'church') {
                   that.church = value
                 } else if (key === 'phone') {
-                  that.data.phone = value
+                  that.phone = value
                 }
               }
             }
