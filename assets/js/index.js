@@ -33,6 +33,8 @@
 
         fetch('https://docs.google.com/forms/d/e/1FAIpQLSc5TuTLxp8olb7NeqbuG0FbLePZiEeC8XWWNyLtm4iPW2Osdg/formResponse?embedded=true', {
           method: 'post',
+          mode: "cors",
+          credentials: "include",
           body: data
         }).finally(() => {
           this.saved = true;

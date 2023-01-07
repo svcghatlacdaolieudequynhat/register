@@ -122,15 +122,15 @@
                                                     <label class="label">Phương tiện</label>
                                                     <div class="p-t-10">
                                                         <label class="radio-container m-r-45">Xe giáo hạt
-                                                            <input type="radio" checked="checked" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Xe giáo hạt">
+                                                            <input type="radio" checked="checked" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Xe giáo hạt" required>
                                                             <span class="checkmark"></span>
                                                         </label>
                                                         <label class="radio-container m-r-45">Xe máy
-                                                            <input type="radio" checked="checked" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Xe máy">
+                                                            <input type="radio" checked="checked" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Xe máy" required>
                                                             <span class="checkmark"></span>
                                                         </label>
                                                         <label class="radio-container">Không có
-                                                            <input type="radio" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Không có">
+                                                            <input type="radio" name="vehicle" id="vehicle" v-model="vehicle" v-bind:autofocus="focus" value="Không có" required>
                                                             <span class="checkmark"></span>
                                                         </label>
                                                     </div>
@@ -139,7 +139,7 @@
                                             <div class="col-12">
                                                 <div class="input-group-select">
                                                     <label class="label">Ghi chú</label>
-                                                    <textarea class="input--style-4" type="text" id="message" rows="3" required v-bind:autofocus="focus" v-model="message" placeholder="Ghi chú ẩn danh, vì thế hãy thoải mái để lại lời nhắn với tụi mình nhé!"></textarea>
+                                                    <textarea class="input--style-4" type="text" id="message" rows="3" v-bind:autofocus="focus" v-model="message" placeholder="Ghi chú ẩn danh, vì thế hãy thoải mái để lại lời nhắn với tụi mình nhé!"></textarea>
                                                 </div>
                                             </div>
                                         </div>
