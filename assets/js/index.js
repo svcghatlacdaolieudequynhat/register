@@ -37,7 +37,8 @@
           credentials: "include",
           body: data
         }).finally(() => {
-          this.saved = true;
+          $('#registerSuccess').modal('show')
+          // this.saved = true;
           this.fullname = '';
           this.church = '';
           this.phone = '';
